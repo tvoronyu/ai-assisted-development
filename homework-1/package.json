@@ -1,0 +1,36 @@
+{
+  "name": "homework-1-banking-transactions-api",
+  "version": "1.0.0",
+  "description": "Homework 1: Banking Transactions REST API built with AI assistance",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint 'src/**/*.js' 'tests/**/*.js'",
+    "lint:fix": "eslint 'src/**/*.js' 'tests/**/*.js' --fix",
+    "format": "prettier --write 'src/**/*.js' 'tests/**/*.js'"
+  },
+  "keywords": ["banking", "rest-api", "express", "ai-assisted"],
+  "author": "Taras",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.3",
+    "supertest": "^7.0.0"
+  }
+}
