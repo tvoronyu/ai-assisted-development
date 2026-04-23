@@ -35,6 +35,58 @@
 
 ---
 
+## 🌐 API Reference
+
+Базовий URL: `http://localhost:3000`
+
+| Method | Endpoint | Опис | Статус-коди |
+|--------|----------|------|-------------|
+| `GET`  | `/health` | Health check | 200 |
+| `POST` | `/transactions` | Створити транзакцію | 201, 400 |
+| `GET`  | `/transactions` | Список із фільтрами (`accountId`, `type`, `from`, `to`) | 200 |
+| `GET`  | `/transactions/:id` | Транзакція за id | 200, 404 |
+| `GET`  | `/transactions/export?format=csv` | CSV-експорт *(Optional C)* | 200 |
+| `GET`  | `/accounts/:accountId/balance` | Баланс рахунку | 200 |
+| `GET`  | `/accounts/:accountId/summary` | Статистика рахунку *(Optional A)* | 200 |
+| `GET`  | `/accounts/:accountId/interest?rate=&days=` | Простий відсоток *(Optional B)* | 200, 400 |
+
+**Модель транзакції:**
+```json
+{
+  "id": "uuid",
+  "fromAccount": "ACC-12345",
+  "toAccount": "ACC-67890",
+  "amount": 100.50,
+  "currency": "USD",
+  "type": "deposit | withdrawal | transfer",
+  "timestamp": "2026-04-23T14:58:48.721Z",
+  "status": "pending | completed | failed"
+}
+```
+
+**Формат помилки валідації:**
+```json
+{
+  "error": "Validation failed",
+  "details": [
+    { "field": "amount", "message": "Amount must be a positive number" }
+  ]
+}
+```
+
+**Приклад:**
+```bash
+curl -X POST http://localhost:3000/transactions \
+  -H "Content-Type: application/json" \
+  -d '{"fromAccount":"ACC-12345","toAccount":"ACC-67890","amount":100.50,"currency":"USD","type":"transfer"}'
+```
+
+Rate limiting (Optional D): **100 req/min/IP**, перевищення → `429 Too Many Requests`.
+
+Повний набір запитів (VS Code REST Client / IntelliJ HTTP): [`demo/sample-requests.http`](./demo/sample-requests.http).
+
+---
+
 ## 🏗️ Архітектурні рішення
 
 - **Шарувата структура:** `routes` → `services` → `storage`. Models і validators — окремо. `app.js` відокремлено від `index.js`, щоб integration-тести могли піднімати Express без прив'язки до порту.
