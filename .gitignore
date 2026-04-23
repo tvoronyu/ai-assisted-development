@@ -48,3 +48,6 @@ tmp/
 temp/
 *.tmp
 *.temp
+
+# Homework task descriptions — local reference only, not committed
+homework-*/TASKS.md
