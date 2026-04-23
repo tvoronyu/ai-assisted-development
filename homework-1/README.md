@@ -1,7 +1,7 @@
 # 🏦 Homework 1: Banking Transactions API
 
-> **Student Name**: Taras
-> **Date Submitted**: _(заповнити на Submit-фазі)_
+> **Student Name**: Taras Voroniuk
+> **Date Submitted**: 2026-04-23
 > **AI Tools Used**: Claude Code (Opus 4.7)
 
 ---
