@@ -1,0 +1,23 @@
+[
+  {
+    "fromAccount": "ACC-EXTRN",
+    "toAccount": "ACC-12345",
+    "amount": 1000,
+    "currency": "USD",
+    "type": "deposit"
+  },
+  {
+    "fromAccount": "ACC-12345",
+    "toAccount": "ACC-67890",
+    "amount": 250.75,
+    "currency": "USD",
+    "type": "transfer"
+  },
+  {
+    "fromAccount": "ACC-12345",
+    "toAccount": "ACC-EXTRN",
+    "amount": 100,
+    "currency": "USD",
+    "type": "withdrawal"
+  }
+]

@@ -1,0 +1,83 @@
+### Health check
+GET http://localhost:3000/health
+
+### Task 1 — Create a transaction (transfer)
+POST http://localhost:3000/transactions
+Content-Type: application/json
+
+{
+  "fromAccount": "ACC-12345",
+  "toAccount": "ACC-67890",
+  "amount": 100.50,
+  "currency": "USD",
+  "type": "transfer"
+}
+
+### Task 1 — Create a deposit
+POST http://localhost:3000/transactions
+Content-Type: application/json
+
+{
+  "fromAccount": "ACC-EXTRN",
+  "toAccount": "ACC-12345",
+  "amount": 500,
+  "currency": "USD",
+  "type": "deposit"
+}
+
+### Task 1 — List all transactions
+GET http://localhost:3000/transactions
+
+### Task 1 — Get transaction by id
+GET http://localhost:3000/transactions/REPLACE_WITH_ID
+
+### Task 1 — Get account balance
+GET http://localhost:3000/accounts/ACC-12345/balance
+
+### Task 2 — Invalid amount (negative)
+POST http://localhost:3000/transactions
+Content-Type: application/json
+
+{
+  "fromAccount": "ACC-12345",
+  "toAccount": "ACC-67890",
+  "amount": -10,
+  "currency": "USD",
+  "type": "transfer"
+}
+
+### Task 2 — Invalid currency
+POST http://localhost:3000/transactions
+Content-Type: application/json
+
+{
+  "fromAccount": "ACC-12345",
+  "toAccount": "ACC-67890",
+  "amount": 10,
+  "currency": "XYZ",
+  "type": "transfer"
+}
+
+### Task 3 — Filter by accountId
+GET http://localhost:3000/transactions?accountId=ACC-12345
+
+### Task 3 — Filter by type
+GET http://localhost:3000/transactions?type=transfer
+
+### Task 3 — Filter by date range
+GET http://localhost:3000/transactions?from=2025-01-01&to=2026-12-31
+
+### Task 3 — Combined filters
+GET http://localhost:3000/transactions?accountId=ACC-12345&type=transfer&from=2025-01-01
+
+### Task 4A — Account summary
+GET http://localhost:3000/accounts/ACC-12345/summary
+
+### Task 4B — Simple interest
+GET http://localhost:3000/accounts/ACC-12345/interest?rate=0.05&days=30
+
+### Task 4C — CSV export
+GET http://localhost:3000/transactions/export?format=csv
+
+### Task 4D — Rate limiting (надсилай швидко 100+ разів для перевірки 429)
+GET http://localhost:3000/health
