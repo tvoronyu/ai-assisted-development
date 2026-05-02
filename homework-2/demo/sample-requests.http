@@ -1,0 +1,136 @@
+### Customer Support Ticket System — sample requests
+### Open this file in VSCode with REST Client extension or JetBrains HTTP Client.
+
+@host = http://localhost:8000
+@ticketId = REPLACE-WITH-UUID-AFTER-CREATING
+
+### -----------------------------------------------------------------
+### Health check
+GET {{host}}/healthz
+
+### -----------------------------------------------------------------
+### Create ticket
+POST {{host}}/tickets
+Content-Type: application/json
+
+{
+  "customer_id": "cust-1",
+  "customer_email": "alice@example.com",
+  "customer_name": "Alice",
+  "subject": "Cannot login",
+  "description": "I am unable to log in. This is critical, production down.",
+  "tags": ["login", "p0"],
+  "metadata": {"source": "web_form", "browser": "Chrome 121", "device_type": "desktop"}
+}
+
+### Create ticket WITH automatic classification
+POST {{host}}/tickets?auto_classify=true
+Content-Type: application/json
+
+{
+  "customer_id": "cust-2",
+  "customer_email": "bob@example.com",
+  "customer_name": "Bob",
+  "subject": "Refund request for invoice 12345",
+  "description": "I would like a refund. The charge on my subscription was duplicated."
+}
+
+### -----------------------------------------------------------------
+### List all tickets
+GET {{host}}/tickets
+
+### List with category filter
+GET {{host}}/tickets?category=billing_question
+
+### List with combined filters + pagination
+GET {{host}}/tickets?priority=urgent&status=new&limit=10&offset=0
+
+### List by customer
+GET {{host}}/tickets?customer_id=cust-1
+
+### -----------------------------------------------------------------
+### Get single ticket
+GET {{host}}/tickets/{{ticketId}}
+
+### Get non-existent ticket (expect 404)
+GET {{host}}/tickets/00000000-0000-0000-0000-000000000000
+
+### -----------------------------------------------------------------
+### Partial update
+PUT {{host}}/tickets/{{ticketId}}
+Content-Type: application/json
+
+{
+  "status": "in_progress",
+  "assigned_to": "agent-007"
+}
+
+### Manual override of auto-classified fields
+PUT {{host}}/tickets/{{ticketId}}
+Content-Type: application/json
+
+{
+  "category": "feature_request",
+  "priority": "low"
+}
+
+### Resolve
+PUT {{host}}/tickets/{{ticketId}}
+Content-Type: application/json
+
+{
+  "status": "resolved"
+}
+
+### -----------------------------------------------------------------
+### Auto-classify existing ticket
+POST {{host}}/tickets/{{ticketId}}/auto-classify
+
+### -----------------------------------------------------------------
+### Bulk import from CSV
+POST {{host}}/tickets/import
+Content-Type: multipart/form-data; boundary=----boundary
+
+------boundary
+Content-Disposition: form-data; name="file"; filename="sample_tickets.csv"
+Content-Type: text/csv
+
+< ../tests/fixtures/sample_tickets.csv
+------boundary--
+
+### Bulk import — JSON
+POST {{host}}/tickets/import
+Content-Type: multipart/form-data; boundary=----boundary
+
+------boundary
+Content-Disposition: form-data; name="file"; filename="sample_tickets.json"
+Content-Type: application/json
+
+< ../tests/fixtures/sample_tickets.json
+------boundary--
+
+### Bulk import — XML
+POST {{host}}/tickets/import
+Content-Type: multipart/form-data; boundary=----boundary
+
+------boundary
+Content-Disposition: form-data; name="file"; filename="sample_tickets.xml"
+Content-Type: application/xml
+
+< ../tests/fixtures/sample_tickets.xml
+------boundary--
+
+### Bulk import — invalid (expect failed=3, successful=0)
+POST {{host}}/tickets/import
+Content-Type: multipart/form-data; boundary=----boundary
+
+------boundary
+Content-Disposition: form-data; name="file"; filename="invalid_tickets.csv"
+Content-Type: text/csv
+
+< ../tests/fixtures/invalid_tickets.csv
+------boundary--
+
+### -----------------------------------------------------------------
+### Delete
+DELETE {{host}}/tickets/{{ticketId}}

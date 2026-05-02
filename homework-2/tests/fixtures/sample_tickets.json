@@ -1,0 +1,375 @@
+[
+  {
+    "customer_id": "cust-0000",
+    "customer_email": "user0@example.com",
+    "customer_name": "User 0",
+    "subject": "500 error on dashboard",
+    "description": "The application crashes immediately upon launching. The error logs show a stack trace ending in NullReferenceException.",
+    "category": "technical_issue",
+    "priority": "medium",
+    "status": "waiting_customer",
+    "tags": [],
+    "metadata": {
+      "source": "email",
+      "browser": "Firefox 121",
+      "device_type": "desktop"
+    }
+  },
+  {
+    "customer_id": "cust-0001",
+    "customer_email": "user1@example.com",
+    "customer_name": "User 1",
+    "subject": "Slow page load",
+    "description": "The application crashes immediately upon launching. The error logs show a stack trace ending in NullReferenceException.",
+    "category": "technical_issue",
+    "priority": "high",
+    "status": "new",
+    "tags": [
+      "mobile-only",
+      "ux",
+      "regression"
+    ],
+    "assigned_to": "agent-7",
+    "metadata": {
+      "source": "chat",
+      "browser": "Edge 120",
+      "device_type": "desktop"
+    }
+  },
+  {
+    "customer_id": "cust-0002",
+    "customer_email": "user2@example.com",
+    "customer_name": "User 2",
+    "subject": "Bulk delete option",
+    "description": "It would be very helpful to have this feature added. Many of my team members have requested similar functionality.",
+    "category": "feature_request",
+    "priority": "urgent",
+    "status": "closed",
+    "tags": [
+      "follow-up",
+      "urgent",
+      "billing"
+    ],
+    "metadata": {
+      "source": "api",
+      "browser": "Edge 120",
+      "device_type": "mobile"
+    }
+  },
+  {
+    "customer_id": "cust-0003",
+    "customer_email": "user3@example.com",
+    "customer_name": "User 3",
+    "subject": "Account info request",
+    "description": "I have a general question about the platform. Can you point me to the relevant documentation or assign someone to help?",
+    "category": "other",
+    "priority": "high",
+    "status": "resolved",
+    "tags": [
+      "regression"
+    ],
+    "metadata": {
+      "source": "chat",
+      "browser": "Edge 120",
+      "device_type": "desktop"
+    }
+  },
+  {
+    "customer_id": "cust-0004",
+    "customer_email": "user4@example.com",
+    "customer_name": "User 4",
+    "subject": "Account info request",
+    "description": "I have a general question about the platform. Can you point me to the relevant documentation or assign someone to help?",
+    "category": "other",
+    "priority": "low",
+    "status": "in_progress",
+    "tags": [
+      "billing",
+      "urgent",
+      "p0"
+    ],
+    "metadata": {
+      "source": "phone",
+      "browser": "Chrome 120",
+      "device_type": "desktop"
+    }
+  },
+  {
+    "customer_id": "cust-0005",
+    "customer_email": "user5@example.com",
+    "customer_name": "User 5",
+    "subject": "500 error on dashboard",
+    "description": "The application crashes immediately upon launching. The error logs show a stack trace ending in NullReferenceException.",
+    "category": "technical_issue",
+    "priority": "high",
+    "status": "new",
+    "tags": [
+      "mobile-only",
+      "ux"
+    ],
+    "metadata": {
+      "source": "email",
+      "browser": "Edge 120",
+      "device_type": "mobile"
+    }
+  },
+  {
+    "customer_id": "cust-0006",
+    "customer_email": "user6@example.com",
+    "customer_name": "User 6",
+    "subject": "Export to PDF",
+    "description": "It would be very helpful to have this feature added. Many of my team members have requested similar functionality.",
+    "category": "feature_request",
+    "priority": "low",
+    "status": "waiting_customer",
+    "tags": [],
+    "metadata": {
+      "source": "chat",
+      "browser": "Chrome 120",
+      "device_type": "tablet"
+    }
+  },
+  {
+    "customer_id": "cust-0007",
+    "customer_email": "user7@example.com",
+    "customer_name": "User 7",
+    "subject": "Refund request for invoice 12345",
+    "description": "I would like to request a refund for the recent invoice. The charge was made twice and only one purchase was intended.",
+    "category": "billing_question",
+    "priority": "urgent",
+    "status": "new",
+    "tags": [],
+    "metadata": {
+      "source": "email",
+      "browser": "Firefox 121",
+      "device_type": "desktop"
+    }
+  },
+  {
+    "customer_id": "cust-0008",
+    "customer_email": "user8@example.com",
+    "customer_name": "User 8",
+    "subject": "App crashes on startup",
+    "description": "The application crashes immediately upon launching. The error logs show a stack trace ending in NullReferenceException.",
+    "category": "technical_issue",
+    "priority": "low",
+    "status": "new",
+    "tags": [
+      "follow-up"
+    ],
+    "metadata": {
+      "source": "api",
+      "browser": "Safari 17",
+      "device_type": "desktop"
+    }
+  },
+  {
+    "customer_id": "cust-0009",
+    "customer_email": "user9@example.com",
+    "customer_name": "User 9",
+    "subject": "Account info request",
+    "description": "I have a general question about the platform. Can you point me to the relevant documentation or assign someone to help?",
+    "category": "other",
+    "priority": "urgent",
+    "status": "in_progress",
+    "tags": [
+      "vip",
+      "urgent"
+    ],
+    "metadata": {
+      "source": "api",
+      "browser": "Edge 120",
+      "device_type": "mobile"
+    }
+  },
+  {
+    "customer_id": "cust-0010",
+    "customer_email": "user10@example.com",
+    "customer_name": "User 10",
+    "subject": "App crashes on startup",
+    "description": "The application crashes immediately upon launching. The error logs show a stack trace ending in NullReferenceException.",
+    "category": "technical_issue",
+    "priority": "high",
+    "status": "new",
+    "tags": [
+      "vip",
+      "urgent"
+    ],
+    "metadata": {
+      "source": "api",
+      "browser": "Edge 120",
+      "device_type": "tablet"
+    }
+  },
+  {
+    "customer_id": "cust-0011",
+    "customer_email": "user11@example.com",
+    "customer_name": "User 11",
+    "subject": "Email notifications missing",
+    "description": "Steps to reproduce: 1. Open the dashboard. 2. Click search. 3. Enter query. Expected: results. Actual: empty list always.",
+    "category": "bug_report",
+    "priority": "medium",
+    "status": "new",
+    "tags": [
+      "follow-up",
+      "vip",
+      "p0"
+    ],
+    "assigned_to": "agent-3",
+    "metadata": {
+      "source": "api",
+      "browser": "Edge 120",
+      "device_type": "tablet"
+    }
+  },
+  {
+    "customer_id": "cust-0012",
+    "customer_email": "user12@example.com",
+    "customer_name": "User 12",
+    "subject": "Account info request",
+    "description": "I have a general question about the platform. Can you point me to the relevant documentation or assign someone to help?",
+    "category": "other",
+    "priority": "medium",
+    "status": "closed",
+    "tags": [
+      "follow-up",
+      "mobile-only",
+      "duplicate"
+    ],
+    "metadata": {
+      "source": "phone",
+      "browser": "Safari 17",
+      "device_type": "mobile"
+    }
+  },
+  {
+    "customer_id": "cust-0013",
+    "customer_email": "user13@example.com",
+    "customer_name": "User 13",
+    "subject": "Password reset not working",
+    "description": "I cannot access my account from any browser. The login page returns 'invalid credentials' even after a password reset.",
+    "category": "account_access",
+    "priority": "low",
+    "status": "in_progress",
+    "tags": [
+      "mobile-only",
+      "ux",
+      "urgent"
+    ],
+    "metadata": {
+      "source": "chat",
+      "browser": "Safari 17",
+      "device_type": "desktop"
+    }
+  },
+  {
+    "customer_id": "cust-0014",
+    "customer_email": "user14@example.com",
+    "customer_name": "User 14",
+    "subject": "Payment failed",
+    "description": "I would like to request a refund for the recent invoice. The charge was made twice and only one purchase was intended.",
+    "category": "billing_question",
+    "priority": "medium",
+    "status": "waiting_customer",
+    "tags": [
+      "duplicate",
+      "urgent"
+    ],
+    "assigned_to": "agent-7",
+    "metadata": {
+      "source": "phone",
+      "browser": "Firefox 121",
+      "device_type": "desktop"
+    }
+  },
+  {
+    "customer_id": "cust-0015",
+    "customer_email": "user15@example.com",
+    "customer_name": "User 15",
+    "subject": "Bulk delete option",
+    "description": "It would be very helpful to have this feature added. Many of my team members have requested similar functionality.",
+    "category": "feature_request",
+    "priority": "high",
+    "status": "resolved",
+    "tags": [
+      "follow-up",
+      "urgent",
+      "duplicate"
+    ],
+    "metadata": {
+      "source": "api",
+      "browser": "Firefox 121",
+      "device_type": "mobile"
+    }
+  },
+  {
+    "customer_id": "cust-0016",
+    "customer_email": "user16@example.com",
+    "customer_name": "User 16",
+    "subject": "Subscription cancellation",
+    "description": "I would like to request a refund for the recent invoice. The charge was made twice and only one purchase was intended.",
+    "category": "billing_question",
+    "priority": "medium",
+    "status": "resolved",
+    "tags": [
+      "mobile-only",
+      "ux"
+    ],
+    "metadata": {
+      "source": "api",
+      "browser": "Edge 120",
+      "device_type": "mobile"
+    }
+  },
+  {
+    "customer_id": "cust-0017",
+    "customer_email": "user17@example.com",
+    "customer_name": "User 17",
+    "subject": "App crashes on startup",
+    "description": "The application crashes immediately upon launching. The error logs show a stack trace ending in NullReferenceException.",
+    "category": "technical_issue",
+    "priority": "high",
+    "status": "waiting_customer",
+    "tags": [],
+    "assigned_to": "agent-8",
+    "metadata": {
+      "source": "phone",
+      "browser": "Firefox 121",
+      "device_type": "desktop"
+    }
+  },
+  {
+    "customer_id": "cust-0018",
+    "customer_email": "user18@example.com",
+    "customer_name": "User 18",
+    "subject": "Subscription cancellation",
+    "description": "I would like to request a refund for the recent invoice. The charge was made twice and only one purchase was intended.",
+    "category": "billing_question",
+    "priority": "medium",
+    "status": "new",
+    "tags": [
+      "regression"
+    ],
+    "metadata": {
+      "source": "email",
+      "browser": "Safari 17",
+      "device_type": "desktop"
+    }
+  },
+  {
+    "customer_id": "cust-0019",
+    "customer_email": "user19@example.com",
+    "customer_name": "User 19",
+    "subject": "Account info request",
+    "description": "I have a general question about the platform. Can you point me to the relevant documentation or assign someone to help?",
+    "category": "other",
+    "priority": "high",
+    "status": "waiting_customer",
+    "tags": [],
+    "metadata": {
+      "source": "web_form",
+      "browser": "Safari 17",
+      "device_type": "tablet"
+    }
+  }
+]
