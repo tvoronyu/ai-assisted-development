@@ -1,5 +1,6 @@
 import os
 import subprocess
+import sys
 from collections.abc import AsyncIterator
 
 import asyncpg
@@ -48,7 +49,7 @@ async def test_engine() -> AsyncIterator[AsyncEngine]:
     env = os.environ.copy()
     env["DATABASE_URL"] = _test_database_url()
     subprocess.run(
-        [".venv/bin/alembic", "upgrade", "head"],
+        [sys.executable, "-m", "alembic", "upgrade", "head"],
         env=env,
         check=True,
         capture_output=True,

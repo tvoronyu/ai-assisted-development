@@ -28,57 +28,67 @@ graph TD
 
 ---
 
-## 2. How to run
+## 2. How to run — everything via Docker
 
 ### Pre-req
 
-```bash
-docker compose up -d postgres
-```
-
-Wait until `docker compose ps` shows `(healthy)`.
+Docker Desktop running. Postgres + app launch with one command — but they are NOT required for the test run because the test profile has its own Postgres dependency.
 
 ### All tests + coverage report
 
 ```bash
-.venv/bin/pytest --cov=src --cov-report=term-missing
+docker compose --profile test run --rm tests
 ```
 
-Expected output ends with `97.80%` (or higher) and `67 passed`.
+What happens:
+
+1. Compose builds the `test` stage of the Dockerfile (runtime image + dev deps + `tests/`).
+2. Postgres service starts (or reuses existing one) and reaches `healthy`.
+3. Tests container runs `pytest --cov=src --cov-report=term-missing`.
+4. After exit the container is removed (`--rm`).
+
+Expected output: **67 passed in ~50s**, coverage **97.80%** (gate 85%).
 
 ### Filter by marker
 
+Override the default `pytest` command:
+
 ```bash
-# Fast unit tests only (~1s)
-.venv/bin/pytest -m unit
+# Fast unit tests only
+docker compose --profile test run --rm tests pytest -m unit
 
 # Integration only (no perf)
-.venv/bin/pytest -m integration
+docker compose --profile test run --rm tests pytest -m integration
 
 # Performance only
-.venv/bin/pytest -m performance
+docker compose --profile test run --rm tests pytest -m performance
 
 # Skip slow performance suite
-.venv/bin/pytest -m "not performance"
+docker compose --profile test run --rm tests pytest -m "not performance"
 ```
 
 ### Filter by file or test name
 
 ```bash
 # Single file
-.venv/bin/pytest tests/test_ticket_api.py -v
+docker compose --profile test run --rm tests pytest tests/test_ticket_api.py -v
 
 # Single test
-.venv/bin/pytest tests/test_ticket_model.py::test_subject_max_length_200
+docker compose --profile test run --rm tests pytest tests/test_ticket_model.py::test_subject_max_length_200
 
 # By substring
-.venv/bin/pytest -k "auto_classify"
+docker compose --profile test run --rm tests pytest -k "auto_classify"
 ```
 
 ### HTML coverage report
 
+Mount a host directory so the report survives container removal:
+
 ```bash
-.venv/bin/pytest --cov=src --cov-report=html
+docker compose --profile test run --rm \
+  -v "$(pwd)/htmlcov:/app/htmlcov" tests \
+  pytest --cov=src --cov-report=html
+
 open htmlcov/index.html
 ```
 
@@ -154,11 +164,10 @@ After all automated tests pass, sanity-check the user journeys:
 
 ### 6.1 Healthz + start
 
-- [ ] `docker compose up -d postgres` — postgres becomes `healthy`
-- [ ] `alembic upgrade head` — exit 0, no migrations re-applied
-- [ ] `uvicorn src.main:app --reload` — starts cleanly
-- [ ] `curl /healthz` → `200 {"status":"ok"}`
-- [ ] Open `http://localhost:8000/docs` — Swagger UI lists 9 endpoints
+- [ ] `docker compose up -d --build` — postgres and app become `healthy`
+- [ ] App auto-applies `alembic upgrade head` on start (visible in `docker compose logs app`)
+- [ ] `curl http://localhost:8000/healthz` → `200 {"status":"ok"}`
+- [ ] Open `http://localhost:8000/docs` — Swagger UI lists 8 endpoints
 
 ### 6.2 CRUD
 
@@ -210,12 +219,12 @@ Total: **97.80%** — well above the 85% gate from `pyproject.toml`.
 
 ## 8. Linting & type checking
 
-These run as part of CI but are useful locally too:
+Через docker (тестовий image включає ruff і pyright):
 
 ```bash
-.venv/bin/ruff check src/ tests/ alembic/env.py
-.venv/bin/ruff format --check src/ tests/ alembic/env.py
-.venv/bin/pyright src/ tests/
+docker compose --profile test run --rm tests ruff check src/ tests/ alembic/env.py
+docker compose --profile test run --rm tests ruff format --check src/ tests/ alembic/env.py
+docker compose --profile test run --rm tests pyright src/ tests/
 ```
 
-All three should report 0 issues. Ruff selects `E, F, I, B, UP, S, N, SIM`; pyright runs in `basic` mode reading from `.venv` for type stubs.
+All three should report 0 issues. Ruff selects `E, F, I, B, UP, S, N, SIM`; pyright runs in `basic` mode.

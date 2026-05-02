@@ -242,7 +242,16 @@ Base URL: `http://localhost:8000`
 
 ## ▶️ Як запустити
 
-Див. [HOWTORUN.md](./HOWTORUN.md) — повна покрокова інструкція (venv → Postgres → Alembic → uvicorn → tests).
+Все виконується через **Docker Compose** — нічого не встановлюється локально (ні Python, ні Postgres, ні pip-залежності).
+
+```bash
+cp .env.example .env
+docker compose up -d --build                          # app + postgres
+docker compose --profile test run --rm tests         # 67 tests, 97.80% coverage
+open http://localhost:8000/docs
+```
+
+Повна покрокова інструкція (фільтри тестів, HTML coverage, lint, troubleshooting) — у [HOWTORUN.md](./HOWTORUN.md).
 
 ---
 

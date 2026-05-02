@@ -20,6 +20,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      target: runtime
     container_name: tickets-app
     environment:
       DATABASE_URL: postgresql+asyncpg://tickets:tickets@postgres:5432/tickets
@@ -38,6 +39,21 @@ services:
       retries: 10
       start_period: 5s
     restart: unless-stopped
+
+  # One-shot test runner. Activate with profile to avoid running on `up`.
+  #   docker compose --profile test run --rm tests
+  tests:
+    profiles: ["test"]
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: test
+    environment:
+      DATABASE_URL: postgresql+asyncpg://tickets:tickets@postgres:5432/tickets
+      APP_ENV: test
+    depends_on:
+      postgres:
+        condition: service_healthy
 
 volumes:
   postgres_data:

@@ -21,7 +21,6 @@ node_modules/
 docs/screenshots/*
 !docs/screenshots/.gitkeep
 demo/
-tests/
 TASKS.md
 PR_TEMPLATE.md
 *.md
