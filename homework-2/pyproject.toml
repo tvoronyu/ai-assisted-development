@@ -1,0 +1,54 @@
+[project]
+name = "homework-2-tickets"
+version = "0.1.0"
+description = "Customer Support Ticket System — Homework 2"
+requires-python = ">=3.13"
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S", "N", "SIM"]
+ignore = ["S101"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["S105", "S106"]
+"alembic/**/*.py" = ["E501"]
+
+[tool.pyright]
+include = ["src", "tests"]
+exclude = ["**/__pycache__", "alembic/versions"]
+typeCheckingMode = "basic"
+pythonVersion = "3.13"
+venvPath = "."
+venv = ".venv"
+reportMissingImports = "error"
+reportMissingTypeStubs = "none"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+markers = [
+  "unit: fast unit tests",
+  "integration: integration tests requiring database",
+  "performance: performance/load tests",
+]
+addopts = "-ra --strict-markers"
+
+[tool.coverage.run]
+source = ["src"]
+concurrency = ["thread", "greenlet"]
+omit = [
+  "src/main.py",
+  "src/__init__.py",
+  "src/**/__init__.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+  "pragma: no cover",
+  "if TYPE_CHECKING:",
+  "raise NotImplementedError",
+]
+fail_under = 85

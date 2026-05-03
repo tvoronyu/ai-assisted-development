@@ -1,0 +1,4 @@
+customer_id,customer_email,customer_name,subject,description
+cust-1,not-an-email,Bob,Login,A long enough description here.
+cust-2,b@example.com,,Issue,A long enough description here.
+cust-3,c@example.com,Carol,Hi,short

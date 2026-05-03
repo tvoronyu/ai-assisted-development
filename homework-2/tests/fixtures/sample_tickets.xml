@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tickets>
+  <ticket>
+    <customer_id>cust-0000</customer_id>
+    <customer_email>user0@example.com</customer_email>
+    <customer_name>User 0</customer_name>
+    <subject>Documentation question</subject>
+    <description>I have a general question about the platform. Can you point me to the relevant documentation or assign someone to help?</description>
+    <category>other</category>
+    <priority>urgent</priority>
+    <status>new</status>
+    <tags>
+      <tag>follow-up</tag>
+      <tag>duplicate</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Safari 17</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0001</customer_id>
+    <customer_email>user1@example.com</customer_email>
+    <customer_name>User 1</customer_name>
+    <subject>Payment failed</subject>
+    <description>I would like to request a refund for the recent invoice. The charge was made twice and only one purchase was intended.</description>
+    <category>billing_question</category>
+    <priority>urgent</priority>
+    <status>new</status>
+    <tags>
+      <tag>follow-up</tag>
+      <tag>vip</tag>
+      <tag>regression</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Firefox 121</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0002</customer_id>
+    <customer_email>user2@example.com</customer_email>
+    <customer_name>User 2</customer_name>
+    <subject>Refund request for invoice 12345</subject>
+    <description>I would like to request a refund for the recent invoice. The charge was made twice and only one purchase was intended.</description>
+    <category>billing_question</category>
+    <priority>high</priority>
+    <status>new</status>
+    <tags>
+      <tag>p0</tag>
+      <tag>mobile-only</tag>
+      <tag>duplicate</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Safari 17</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0003</customer_id>
+    <customer_email>user3@example.com</customer_email>
+    <customer_name>User 3</customer_name>
+    <subject>Subscription cancellation</subject>
+    <description>I would like to request a refund for the recent invoice. The charge was made twice and only one purchase was intended.</description>
+    <category>billing_question</category>
+    <priority>urgent</priority>
+    <status>closed</status>
+    <tags>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <browser>Firefox 121</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0004</customer_id>
+    <customer_email>user4@example.com</customer_email>
+    <customer_name>User 4</customer_name>
+    <subject>App crashes on startup</subject>
+    <description>The application crashes immediately upon launching. The error logs show a stack trace ending in NullReferenceException.</description>
+    <category>technical_issue</category>
+    <priority>high</priority>
+    <status>closed</status>
+    <tags>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <browser>Chrome 120</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0005</customer_id>
+    <customer_email>user5@example.com</customer_email>
+    <customer_name>User 5</customer_name>
+    <subject>Date picker timezone bug</subject>
+    <description>Steps to reproduce: 1. Open the dashboard. 2. Click search. 3. Enter query. Expected: results. Actual: empty list always.</description>
+    <category>bug_report</category>
+    <priority>medium</priority>
+    <status>new</status>
+    <tags>
+      <tag>regression</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Edge 120</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0006</customer_id>
+    <customer_email>user6@example.com</customer_email>
+    <customer_name>User 6</customer_name>
+    <subject>Subscription cancellation</subject>
+    <description>I would like to request a refund for the recent invoice. The charge was made twice and only one purchase was intended.</description>
+    <category>billing_question</category>
+    <priority>high</priority>
+    <status>resolved</status>
+    <assigned_to>agent-5</assigned_to>
+    <tags>
+    </tags>
+    <metadata>
+      <source>phone</source>
+      <browser>Firefox 121</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0007</customer_id>
+    <customer_email>user7@example.com</customer_email>
+    <customer_name>User 7</customer_name>
+    <subject>App crashes on startup</subject>
+    <description>The application crashes immediately upon launching. The error logs show a stack trace ending in NullReferenceException.</description>
+    <category>technical_issue</category>
+    <priority>urgent</priority>
+    <status>in_progress</status>
+    <tags>
+      <tag>regression</tag>
+      <tag>follow-up</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Edge 120</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0008</customer_id>
+    <customer_email>user8@example.com</customer_email>
+    <customer_name>User 8</customer_name>
+    <subject>Export to PDF</subject>
+    <description>It would be very helpful to have this feature added. Many of my team members have requested similar functionality.</description>
+    <category>feature_request</category>
+    <priority>low</priority>
+    <status>resolved</status>
+    <tags>
+    </tags>
+    <metadata>
+      <source>phone</source>
+      <browser>Chrome 120</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0009</customer_id>
+    <customer_email>user9@example.com</customer_email>
+    <customer_name>User 9</customer_name>
+    <subject>Date picker timezone bug</subject>
+    <description>Steps to reproduce: 1. Open the dashboard. 2. Click search. 3. Enter query. Expected: results. Actual: empty list always.</description>
+    <category>bug_report</category>
+    <priority>urgent</priority>
+    <status>new</status>
+    <tags>
+      <tag>urgent</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Chrome 120</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0010</customer_id>
+    <customer_email>user10@example.com</customer_email>
+    <customer_name>User 10</customer_name>
+    <subject>Documentation question</subject>
+    <description>I have a general question about the platform. Can you point me to the relevant documentation or assign someone to help?</description>
+    <category>other</category>
+    <priority>medium</priority>
+    <status>in_progress</status>
+    <tags>
+      <tag>follow-up</tag>
+      <tag>vip</tag>
+      <tag>p0</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Edge 120</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0011</customer_id>
+    <customer_email>user11@example.com</customer_email>
+    <customer_name>User 11</customer_name>
+    <subject>Cannot login</subject>
+    <description>I cannot access my account from any browser. The login page returns 'invalid credentials' even after a password reset.</description>
+    <category>account_access</category>
+    <priority>medium</priority>
+    <status>resolved</status>
+    <assigned_to>agent-5</assigned_to>
+    <tags>
+      <tag>regression</tag>
+      <tag>mobile-only</tag>
+      <tag>follow-up</tag>
+    </tags>
+    <metadata>
+      <source>phone</source>
+      <browser>Chrome 120</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0012</customer_id>
+    <customer_email>user12@example.com</customer_email>
+    <customer_name>User 12</customer_name>
+    <subject>Refund request for invoice 12345</subject>
+    <description>I would like to request a refund for the recent invoice. The charge was made twice and only one purchase was intended.</description>
+    <category>billing_question</category>
+    <priority>low</priority>
+    <status>closed</status>
+    <assigned_to>agent-9</assigned_to>
+    <tags>
+    </tags>
+    <metadata>
+      <source>phone</source>
+      <browser>Edge 120</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0013</customer_id>
+    <customer_email>user13@example.com</customer_email>
+    <customer_name>User 13</customer_name>
+    <subject>Subscription cancellation</subject>
+    <description>I would like to request a refund for the recent invoice. The charge was made twice and only one purchase was intended.</description>
+    <category>billing_question</category>
+    <priority>low</priority>
+    <status>resolved</status>
+    <assigned_to>agent-5</assigned_to>
+    <tags>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <browser>Safari 17</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0014</customer_id>
+    <customer_email>user14@example.com</customer_email>
+    <customer_name>User 14</customer_name>
+    <subject>Bulk delete option</subject>
+    <description>It would be very helpful to have this feature added. Many of my team members have requested similar functionality.</description>
+    <category>feature_request</category>
+    <priority>low</priority>
+    <status>new</status>
+    <assigned_to>agent-9</assigned_to>
+    <tags>
+    </tags>
+    <metadata>
+      <source>phone</source>
+      <browser>Firefox 121</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0015</customer_id>
+    <customer_email>user15@example.com</customer_email>
+    <customer_name>User 15</customer_name>
+    <subject>Two-factor code rejected</subject>
+    <description>I cannot access my account from any browser. The login page returns 'invalid credentials' even after a password reset.</description>
+    <category>account_access</category>
+    <priority>low</priority>
+    <status>new</status>
+    <tags>
+      <tag>vip</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Chrome 120</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0016</customer_id>
+    <customer_email>user16@example.com</customer_email>
+    <customer_name>User 16</customer_name>
+    <subject>Bulk delete option</subject>
+    <description>It would be very helpful to have this feature added. Many of my team members have requested similar functionality.</description>
+    <category>feature_request</category>
+    <priority>medium</priority>
+    <status>closed</status>
+    <tags>
+      <tag>mobile-only</tag>
+      <tag>follow-up</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Firefox 121</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0017</customer_id>
+    <customer_email>user17@example.com</customer_email>
+    <customer_name>User 17</customer_name>
+    <subject>Add dark mode</subject>
+    <description>It would be very helpful to have this feature added. Many of my team members have requested similar functionality.</description>
+    <category>feature_request</category>
+    <priority>high</priority>
+    <status>new</status>
+    <assigned_to>agent-5</assigned_to>
+    <tags>
+      <tag>mobile-only</tag>
+      <tag>ux</tag>
+    </tags>
+    <metadata>
+      <source>phone</source>
+      <browser>Safari 17</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0018</customer_id>
+    <customer_email>user18@example.com</customer_email>
+    <customer_name>User 18</customer_name>
+    <subject>Email notifications missing</subject>
+    <description>Steps to reproduce: 1. Open the dashboard. 2. Click search. 3. Enter query. Expected: results. Actual: empty list always.</description>
+    <category>bug_report</category>
+    <priority>low</priority>
+    <status>in_progress</status>
+    <tags>
+      <tag>duplicate</tag>
+      <tag>follow-up</tag>
+      <tag>billing</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Edge 120</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0019</customer_id>
+    <customer_email>user19@example.com</customer_email>
+    <customer_name>User 19</customer_name>
+    <subject>Slow page load</subject>
+    <description>The application crashes immediately upon launching. The error logs show a stack trace ending in NullReferenceException.</description>
+    <category>technical_issue</category>
+    <priority>high</priority>
+    <status>closed</status>
+    <tags>
+      <tag>p0</tag>
+      <tag>mobile-only</tag>
+      <tag>urgent</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Edge 120</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0020</customer_id>
+    <customer_email>user20@example.com</customer_email>
+    <customer_name>User 20</customer_name>
+    <subject>Export to PDF</subject>
+    <description>It would be very helpful to have this feature added. Many of my team members have requested similar functionality.</description>
+    <category>feature_request</category>
+    <priority>high</priority>
+    <status>resolved</status>
+    <tags>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <browser>Safari 17</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0021</customer_id>
+    <customer_email>user21@example.com</customer_email>
+    <customer_name>User 21</customer_name>
+    <subject>Add dark mode</subject>
+    <description>It would be very helpful to have this feature added. Many of my team members have requested similar functionality.</description>
+    <category>feature_request</category>
+    <priority>low</priority>
+    <status>new</status>
+    <tags>
+      <tag>mobile-only</tag>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <browser>Chrome 120</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0022</customer_id>
+    <customer_email>user22@example.com</customer_email>
+    <customer_name>User 22</customer_name>
+    <subject>Payment failed</subject>
+    <description>I would like to request a refund for the recent invoice. The charge was made twice and only one purchase was intended.</description>
+    <category>billing_question</category>
+    <priority>low</priority>
+    <status>new</status>
+    <assigned_to>agent-2</assigned_to>
+    <tags>
+      <tag>duplicate</tag>
+      <tag>mobile-only</tag>
+    </tags>
+    <metadata>
+      <source>api</source>
+      <browser>Edge 120</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0023</customer_id>
+    <customer_email>user23@example.com</customer_email>
+    <customer_name>User 23</customer_name>
+    <subject>Slow page load</subject>
+    <description>The application crashes immediately upon launching. The error logs show a stack trace ending in NullReferenceException.</description>
+    <category>technical_issue</category>
+    <priority>medium</priority>
+    <status>in_progress</status>
+    <tags>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Chrome 120</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0024</customer_id>
+    <customer_email>user24@example.com</customer_email>
+    <customer_name>User 24</customer_name>
+    <subject>Password reset not working</subject>
+    <description>I cannot access my account from any browser. The login page returns 'invalid credentials' even after a password reset.</description>
+    <category>account_access</category>
+    <priority>high</priority>
+    <status>waiting_customer</status>
+    <assigned_to>agent-6</assigned_to>
+    <tags>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Safari 17</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0025</customer_id>
+    <customer_email>user25@example.com</customer_email>
+    <customer_name>User 25</customer_name>
+    <subject>Add dark mode</subject>
+    <description>It would be very helpful to have this feature added. Many of my team members have requested similar functionality.</description>
+    <category>feature_request</category>
+    <priority>high</priority>
+    <status>closed</status>
+    <tags>
+      <tag>billing</tag>
+      <tag>duplicate</tag>
+      <tag>vip</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Edge 120</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0026</customer_id>
+    <customer_email>user26@example.com</customer_email>
+    <customer_name>User 26</customer_name>
+    <subject>Bulk delete option</subject>
+    <description>It would be very helpful to have this feature added. Many of my team members have requested similar functionality.</description>
+    <category>feature_request</category>
+    <priority>high</priority>
+    <status>in_progress</status>
+    <tags>
+      <tag>regression</tag>
+      <tag>follow-up</tag>
+      <tag>billing</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Edge 120</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0027</customer_id>
+    <customer_email>user27@example.com</customer_email>
+    <customer_name>User 27</customer_name>
+    <subject>App crashes on startup</subject>
+    <description>The application crashes immediately upon launching. The error logs show a stack trace ending in NullReferenceException.</description>
+    <category>technical_issue</category>
+    <priority>low</priority>
+    <status>waiting_customer</status>
+    <tags>
+      <tag>mobile-only</tag>
+      <tag>regression</tag>
+    </tags>
+    <metadata>
+      <source>chat</source>
+      <browser>Safari 17</browser>
+      <device_type>desktop</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0028</customer_id>
+    <customer_email>user28@example.com</customer_email>
+    <customer_name>User 28</customer_name>
+    <subject>Add dark mode</subject>
+    <description>It would be very helpful to have this feature added. Many of my team members have requested similar functionality.</description>
+    <category>feature_request</category>
+    <priority>high</priority>
+    <status>resolved</status>
+    <assigned_to>agent-1</assigned_to>
+    <tags>
+      <tag>regression</tag>
+      <tag>duplicate</tag>
+    </tags>
+    <metadata>
+      <source>web_form</source>
+      <browser>Edge 120</browser>
+      <device_type>mobile</device_type>
+    </metadata>
+  </ticket>
+  <ticket>
+    <customer_id>cust-0029</customer_id>
+    <customer_email>user29@example.com</customer_email>
+    <customer_name>User 29</customer_name>
+    <subject>Email notifications missing</subject>
+    <description>Steps to reproduce: 1. Open the dashboard. 2. Click search. 3. Enter query. Expected: results. Actual: empty list always.</description>
+    <category>bug_report</category>
+    <priority>low</priority>
+    <status>waiting_customer</status>
+    <assigned_to>agent-3</assigned_to>
+    <tags>
+      <tag>ux</tag>
+    </tags>
+    <metadata>
+      <source>email</source>
+      <browser>Firefox 121</browser>
+      <device_type>tablet</device_type>
+    </metadata>
+  </ticket>
+</tickets>
